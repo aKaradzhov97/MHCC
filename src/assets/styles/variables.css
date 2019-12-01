@@ -1,0 +1,14 @@
+:root {
+  /* Colors */
+  --main-color-bg: #FAFAFA;
+  --main-color-hover: #ED2939;
+
+  /* Distances */
+  --main-distance: 1rem;
+
+  /* Timing */
+  --main-transition-time: 0.15s;
+
+  /* Others */
+  --main-border: 1px solid #E6E6E6;
+}

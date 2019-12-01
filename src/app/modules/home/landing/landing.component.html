@@ -1,0 +1,29 @@
+<section class="main-content">
+  <section class="job-list-panel">
+    <mat-list *ngIf="jobs.length > 0; else noActiveJobs">
+      <mat-list-item *ngFor="let job of jobs"
+                     [class.selected]="job === selectedJob"
+                     (click)="display(job.id)">
+        <span>{{job.title}}</span>
+      </mat-list-item>
+    </mat-list>
+  </section>
+
+  <section class="job-overview-panel">
+    <mat-card *ngIf="selectedJob; else noSelectedJob">
+      <mat-card-header>
+        <mat-card-title>{{selectedJob.title}}</mat-card-title>
+        <mat-card-subtitle>{{selectedJob.city}}, {{selectedJob.zip_code}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>{{selectedJob.description}}</mat-card-content>
+    </mat-card>
+  </section>
+</section>
+
+<ng-template #noSelectedJob>
+  <p>Please select a job from the list for more detailed information.</p>
+</ng-template>
+
+<ng-template #noActiveJobs>
+  <p>We don't have any active jobs at this moment. Please come back later!</p>
+</ng-template>

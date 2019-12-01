@@ -1,0 +1,55 @@
+/* Mobile first styling. */
+/* Main content container. */
+.main-content {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.main-content > section {
+  padding: var(--main-distance);
+}
+
+/* Mat-list */
+.mat-list-base {
+  padding-top: 0;
+}
+
+/* List items. */
+.mat-list-item {
+  border: var(--main-border);
+  background: var(--main-color-bg);
+  cursor: pointer;
+  transition: var(--main-transition-time);
+}
+
+.mat-list-item:focus,
+.mat-list-item:hover {
+  background: var(--main-color-hover);
+  color: #fff;
+}
+
+.mat-list-item:not(:last-of-type) {
+  border-bottom: none;
+}
+
+.mat-list-item.selected {
+  background: var(--main-color-hover);
+  color: #fff;
+}
+
+/* Mat-card / Job details panel. */
+.mat-card {
+  background: var(--main-color-bg);
+}
+
+/* Responsive. */
+@media screen and (min-width: 768px) {
+  .main-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-content > section {
+    flex: 1;
+  }
+}
